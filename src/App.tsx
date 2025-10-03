@@ -1,10 +1,36 @@
-import { Brain, TrendingUp, Users, CheckCircle, Star, MessageCircle, Instagram } from 'lucide-react';
+import { Brain, TrendingUp, Users, CheckCircle, Star, MessageCircle, Instagram, Gift } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { saveLead } from './lib/supabase';
 
 function App() {
   const whatsappNumber = '5522998148209';
   const whatsappMessage = encodeURIComponent('Olá Michelli! Gostaria de saber mais sobre a mentoria.');
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
   const instagramLink = 'https://instagram.com/michelli.rios';
+
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      await saveLead(formData);
+      setSubmitMessage('Obrigada! Você ganhou seu brinde! Em breve entraremos em contato.');
+      setFormData({ name: '', email: '', phone: '' });
+    } catch (error: any) {
+      if (error.code === '23505') {
+        setSubmitMessage('Este e-mail já está cadastrado!');
+      } else {
+        setSubmitMessage('Erro ao enviar. Tente novamente.');
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const benefits = [
     'Estratégias comprovadas para atrair mais pacientes',
@@ -40,9 +66,12 @@ function App() {
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4" />
-              Neuropsicóloga & Mentora
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/logotipo amarelo.png"
+                alt="Michelli Rios - Neuropsicóloga"
+                className="h-16 md:h-20 w-auto"
+              />
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -124,7 +153,7 @@ function App() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-2xl opacity-20 blur-xl"></div>
                 <img
-                  src="/6a5bceac-eb3f-4695-9603-227f53167f8a.jpg"
+                  src="/b1094d67-534a-40d4-ad76-a62948b27514.jpg"
                   alt="Michelli Rios - Neuropsicóloga e Mentora"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
@@ -166,6 +195,92 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Capture Form - Gift Section */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-yellow-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <div className="bg-gradient-to-r from-amber-500 to-yellow-500 px-8 py-12 text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full mb-6 animate-pulse">
+                <Gift className="w-10 h-10 text-amber-500" />
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                Você Ganhou um Brinde!
+              </h2>
+              <p className="text-xl text-amber-50">
+                Preencha o formulário abaixo e receba seu presente exclusivo
+              </p>
+            </div>
+
+            <div className="p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Nome Completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none"
+                    placeholder="Digite seu nome completo"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Telefone *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold text-lg py-4 rounded-lg hover:from-amber-600 hover:to-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Enviando...' : 'Quero Meu Brinde!'}
+                </button>
+
+                {submitMessage && (
+                  <div className={`p-4 rounded-lg text-center font-medium ${
+                    submitMessage.includes('Obrigada')
+                      ? 'bg-green-50 text-green-800 border-2 border-green-200'
+                      : 'bg-red-50 text-red-800 border-2 border-red-200'
+                  }`}>
+                    {submitMessage}
+                  </div>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </section>
