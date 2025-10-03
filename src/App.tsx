@@ -43,9 +43,10 @@ function App() {
 
   const testimonials = [
     {
-      name: 'Dra. Ana Paula Silva',
-      text: 'A mentoria da Michelli transformou minha prática! Consegui triplicar meus ganhos em 6 meses.',
-      role: 'Psicóloga Clínica'
+      name: '@psigrasielly',
+      text: 'A mentoria tem sido fundamental nesse processo. Ela me ajuda a estruturar minha carreira, enxergar possibilidades e ganhar clareza sobre os passos que preciso dar. Hoje consigo visualizar melhor meu caminho, com mais segurança e direcionamento para construir uma prática sólida e alinhada ao que acredito. Obrigada Michelli Rios pelo apoio.',
+      role: 'Psicóloga',
+      instagram: 'https://instagram.com/psigrasielly'
     },
     {
       name: 'Dra. Juliana Costa',
@@ -70,7 +71,7 @@ function App() {
               <img
                 src="/logotipo amarelo.png"
                 alt="Michelli Rios - Neuropsicóloga"
-                className="h-16 md:h-20 w-auto"
+                className="h-24 md:h-32 w-auto"
               />
             </div>
 
@@ -310,7 +311,19 @@ function App() {
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.text}"</p>
                 <div className="border-t border-emerald-200 pt-4">
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  {'instagram' in testimonial ? (
+                    <a
+                      href={testimonial.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-gray-900 hover:text-emerald-600 transition-colors flex items-center gap-2"
+                    >
+                      <Instagram className="w-4 h-4" />
+                      {testimonial.name}
+                    </a>
+                  ) : (
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  )}
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
