@@ -128,6 +128,12 @@ function App() {
                   alt="Michelli Rios - Neuropsicóloga e Mentora"
                   className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <Instagram className="w-4 h-4 text-emerald-600" />
+                    <span className="text-sm font-semibold text-gray-900">@michelli.rios</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
