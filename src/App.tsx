@@ -76,12 +76,12 @@ function App() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Transforme Sua Carreira e{' '}
-              <span className="text-emerald-600">Multiplique Seus Ganhos</span>
+              Prosperidade com Leveza:{' '}
+              <span className="text-emerald-600">a psicologia clínica que respeita sua vida</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Mentoria exclusiva para psicólogas que desejam construir uma prática próspera e lucrativa
+              Mentoria exclusiva para psicólogas que querem crescer profissionalmente sem sacrificar o que realmente importa
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -123,10 +123,10 @@ function App() {
                 Olá, sou a <span className="text-emerald-600">Michelli Rios</span>
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                Neuropsicóloga especializada em mentoria para profissionais da psicologia que desejam alcançar a independência financeira através de suas práticas.
+                Psicóloga especialista em neuropsicologia, com experiência em ajudar psicólogas a reestruturarem seus consultórios para modelos sustentáveis.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Depois de anos ajudando centenas de psicólogas a transformarem suas carreiras, desenvolvi um método comprovado que une estratégias de negócios com a essência do cuidado humanizado.
+                Desenvolvi um método que permite você trabalhar MELHOR, não mais. Construir um consultório estratégico, previsível e sustentável, conquistando prosperidade de forma leve, sem abrir mão da vida pessoal.
               </p>
               <div className="flex items-center gap-4 text-gray-700 mb-8">
                 <div className="flex items-center gap-2">
@@ -144,7 +144,7 @@ function App() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Minha Missão</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Empoderar psicólogas a construírem práticas sustentáveis e lucrativas, onde o sucesso financeiro anda lado a lado com o propósito de transformar vidas.
+                      Ajudar psicólogas a construírem carreiras prósperas sem abrir mão do que realmente importa: saúde, família e qualidade de vida.
                     </p>
                   </div>
                 </div>
@@ -170,32 +170,214 @@ function App() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Problem Section */}
+      <section className="py-20 bg-gradient-to-br from-rose-50 to-red-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              Agenda Lotada, Vida Vazia
+            </h2>
+            <p className="text-xl text-gray-600">
+              Você se identifica com alguma dessas situações?
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultório cheio, mas sem tempo para viver</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Agenda lotada, lista de espera crescendo, mas sem tempo para família, lazer e descanso. O consultório consome toda sua energia.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Burnout silencioso</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Você ajuda pacientes todos os dias, mas não consegue cuidar de si mesma. Ansiedade, insônia e exaustão se tornaram rotina.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Renda estagnada</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Trabalha mais horas, mas o ganho não cresce na mesma proporção. Esforço máximo, resultado mínimo.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Repetição infinita</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Sempre o mesmo ciclo, sem mudanças reais. Você sabe que precisa mudar, mas não sabe por onde começar.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-rose-600 to-red-600 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Se isso continuar...</h3>
+            <ul className="space-y-3 text-lg">
+              <li>Você perderá momentos preciosos com quem ama</li>
+              <li>Sua saúde mental e física estará em risco</li>
+              <li>Relacionamentos ficarão em segundo plano</li>
+              <li>A estagnação profissional será disfarçada de produtividade</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Existe um Caminho Melhor
+          </h2>
+          <p className="text-xl text-gray-600 mb-12">
+            E se você pudesse trabalhar MELHOR, não mais?
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 text-left">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
+              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultório estratégico e sustentável</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Construa um modelo de negócio previsível que respeita seu tempo e sua saúde.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
+              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Prosperidade de forma leve</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Aumente sua renda sem abrir mão da vida pessoal, da família e do descanso.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
+              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Liberdade e presença</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Tenha tempo com quem você ama e energia para aproveitar a vida.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
+              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Equilíbrio real</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Carreira próspera E vida pessoal plena. Você não precisa escolher.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              O Que Você Vai Conquistar
+              Metodologia em 6 Passos
             </h2>
             <p className="text-xl text-gray-600">
-              Transforme sua prática com estratégias comprovadas
+              Um caminho estruturado para sua transformação profissional
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-emerald-600" />
-                  </div>
-                  <p className="text-gray-700 font-medium leading-relaxed">{benefit}</p>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">1</span>
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Diagnóstico e Reposicionamento</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Análise completa do seu consultório e definição de novos caminhos estratégicos.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Modelo de Negócio Sustentável</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Construa uma estrutura que funciona sem esgotar você no processo.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Autoridade e Visibilidade</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Posicione-se como referência e atraia os pacientes ideais para você.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">4</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Captação Previsível de Pacientes</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Sistema consistente para manter sua agenda equilibrada e sustentável.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">5</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Gestão e Processos</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Organize seu consultório com processos simples que economizam tempo.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-bold text-emerald-600">6</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Consolidação e Plano de Ação</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Plano personalizado para manter e expandir seus resultados de forma sustentável.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-600 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Resultados Reais que Você Pode Conquistar
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="text-5xl font-bold mb-2">25-40%</div>
+              <p className="text-xl">Redução nas horas de trabalho</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="text-5xl font-bold mb-2">30-60%</div>
+              <p className="text-xl">Aumento na renda mensal</p>
+            </div>
+          </div>
+
+          <div className="mt-12 space-y-4 text-lg">
+            <div className="flex items-center justify-center gap-3">
+              <CheckCircle className="w-6 h-6 flex-shrink-0" />
+              <span>Previsibilidade e organização no consultório</span>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <CheckCircle className="w-6 h-6 flex-shrink-0" />
+              <span>Mais equilíbrio entre vida pessoal e profissional</span>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <CheckCircle className="w-6 h-6 flex-shrink-0" />
+              <span>Energia renovada para a prática clínica</span>
+            </div>
           </div>
         </div>
       </section>
@@ -336,11 +518,14 @@ function App() {
       <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Pronta Para Transformar Sua Carreira?
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Você se tornou psicóloga para transformar vidas
           </h2>
-          <p className="text-xl text-emerald-50 mb-8">
-            Vamos conversar sobre como a mentoria pode impulsionar seus resultados
+          <p className="text-2xl text-emerald-50 mb-4">
+            Mas a sua também merece ser vivida plenamente
+          </p>
+          <p className="text-xl text-emerald-100 mb-8 font-semibold">
+            É hora de construir o consultório que respeita sua vida
           </p>
           <a
             href={whatsappLink}
@@ -349,7 +534,7 @@ function App() {
             className="inline-flex items-center gap-3 bg-white text-emerald-600 px-10 py-5 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
           >
             <MessageCircle className="w-6 h-6" />
-            Falar com Michelli no WhatsApp
+            Quero Conhecer a Mentoria
           </a>
           <p className="mt-6 text-emerald-50 text-sm">
             Resposta rápida • Atendimento personalizado
