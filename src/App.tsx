@@ -171,55 +171,76 @@ function App() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-gradient-to-br from-rose-50 to-red-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/WhatsApp%20Image%202025-10-08%20at%2019.44.56.jpeg)',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 to-gray-800/85"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               Agenda Lotada, Vida Vazia
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-2xl text-white/90 drop-shadow">
               Você se identifica com alguma dessas situações?
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultório cheio, mas sem tempo para viver</h3>
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultório cheio, vida vazia</h3>
               <p className="text-gray-700 leading-relaxed">
-                Agenda lotada, lista de espera crescendo, mas sem tempo para família, lazer e descanso. O consultório consome toda sua energia.
+                Agenda lotada, mas sem tempo para família e descanso.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Burnout silencioso</h3>
               <p className="text-gray-700 leading-relaxed">
-                Você ajuda pacientes todos os dias, mas não consegue cuidar de si mesma. Ansiedade, insônia e exaustão se tornaram rotina.
+                Ajuda pacientes, mas não consegue cuidar de si mesma.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Renda estagnada</h3>
               <p className="text-gray-700 leading-relaxed">
-                Trabalha mais horas, mas o ganho não cresce na mesma proporção. Esforço máximo, resultado mínimo.
+                Trabalha mais horas, ganho não cresce na mesma proporção.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-rose-500">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Repetição infinita</h3>
               <p className="text-gray-700 leading-relaxed">
-                Sempre o mesmo ciclo, sem mudanças reais. Você sabe que precisa mudar, mas não sabe por onde começar.
+                Sempre o mesmo ciclo, sem mudanças reais.
               </p>
             </div>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-rose-600 to-red-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Se isso continuar...</h3>
-            <ul className="space-y-3 text-lg">
-              <li>Você perderá momentos preciosos com quem ama</li>
-              <li>Sua saúde mental e física estará em risco</li>
-              <li>Relacionamentos ficarão em segundo plano</li>
-              <li>A estagnação profissional será disfarçada de produtividade</li>
-            </ul>
+          <div className="bg-gradient-to-r from-rose-600 to-red-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">Se isso continuar...</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-lg">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">•</span>
+                <span>Perda de momentos preciosos</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">•</span>
+                <span>Saúde mental em risco</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">•</span>
+                <span>Relacionamentos em segundo plano</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">•</span>
+                <span>Estagnação profissional</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -271,8 +292,16 @@ function App() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-5"
+          style={{
+            backgroundImage: 'url(/0197e4fe-3f51-4e3f-b9dd-af64c1179068.jpg)',
+            backgroundSize: 'auto 80%',
+          }}
+        ></div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Metodologia em 6 Passos
