@@ -221,7 +221,7 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-rose-600 to-red-600 rounded-2xl p-8 text-white text-center shadow-2xl">
+          <div className="bg-gradient-to-r from-emerald-700 to-emerald-600 rounded-2xl p-8 text-white text-center shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Se isso continuar...</h3>
             <div className="grid md:grid-cols-2 gap-4 text-lg">
               <div className="flex items-center gap-3">
@@ -247,129 +247,156 @@ function App() {
 
       {/* Solution Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Existe um Caminho Melhor
-          </h2>
-          <p className="text-xl text-gray-600 mb-12">
-            E se você pudesse trabalhar MELHOR, não mais?
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-6 text-left">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
-              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultório estratégico e sustentável</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Construa um modelo de negócio previsível que respeita seu tempo e sua saúde.
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Existe um Caminho Melhor
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                E se você pudesse trabalhar MELHOR, não mais?
               </p>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Consultório estratégico e sustentável</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Construa um modelo de negócio previsível que respeita seu tempo e sua saúde.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Prosperidade de forma leve</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Aumente sua renda sem abrir mão da vida pessoal, da família e do descanso.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Liberdade e presença</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Tenha tempo com quem você ama e energia para aproveitar a vida.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Equilíbrio real</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Carreira próspera E vida pessoal plena. Você não precisa escolher.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
-              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Prosperidade de forma leve</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Aumente sua renda sem abrir mão da vida pessoal, da família e do descanso.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
-              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Liberdade e presença</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Tenha tempo com quem você ama e energia para aproveitar a vida.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl shadow-lg">
-              <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Equilíbrio real</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Carreira próspera E vida pessoal plena. Você não precisa escolher.
-              </p>
+            <div className="order-1 md:order-2">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-2xl opacity-20 blur-xl"></div>
+                <img
+                  src="/0197e4fe-3f51-4e3f-b9dd-af64c1179068%20copy.jpg"
+                  alt="Michelli Rios - Mentoria para Psicólogas"
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-gray-50 relative overflow-hidden">
-        <div
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-5"
-          style={{
-            backgroundImage: 'url(/0197e4fe-3f51-4e3f-b9dd-af64c1179068.jpg)',
-            backgroundSize: 'auto 80%',
-          }}
-        ></div>
-
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Metodologia em 6 Passos
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               Um caminho estruturado para sua transformação profissional
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">1</span>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                1
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Diagnóstico e Reposicionamento</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Análise completa do seu consultório e definição de novos caminhos estratégicos.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Diagnóstico e Reposicionamento</h3>
+                <p className="text-gray-700">
+                  Análise completa do seu consultório e definição de novos caminhos estratégicos.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">2</span>
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                2
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Modelo de Negócio Sustentável</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Construa uma estrutura que funciona sem esgotar você no processo.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Modelo de Negócio Sustentável</h3>
+                <p className="text-gray-700">
+                  Construa uma estrutura que funciona sem esgotar você no processo.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">3</span>
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                3
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Autoridade e Visibilidade</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Posicione-se como referência e atraia os pacientes ideais para você.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Autoridade e Visibilidade</h3>
+                <p className="text-gray-700">
+                  Posicione-se como referência e atraia os pacientes ideais para você.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">4</span>
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                4
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Captação Previsível de Pacientes</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Sistema consistente para manter sua agenda equilibrada e sustentável.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Captação Previsível de Pacientes</h3>
+                <p className="text-gray-700">
+                  Sistema consistente para manter sua agenda equilibrada e sustentável.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">5</span>
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                5
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Gestão e Processos</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Organize seu consultório com processos simples que economizam tempo.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Gestão e Processos</h3>
+                <p className="text-gray-700">
+                  Organize seu consultório com processos simples que economizam tempo.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl font-bold text-emerald-600">6</span>
+            <div className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg">
+                6
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Consolidação e Plano de Ação</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Plano personalizado para manter e expandir seus resultados de forma sustentável.
-              </p>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">Consolidação e Plano de Ação</h3>
+                <p className="text-gray-700">
+                  Plano personalizado para manter e expandir seus resultados de forma sustentável.
+                </p>
+              </div>
             </div>
           </div>
         </div>
