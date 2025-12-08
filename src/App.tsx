@@ -1,6 +1,6 @@
 import { Brain, TrendingUp, Users, CheckCircle, Star, MessageCircle, Instagram, Gift } from 'lucide-react';
 import { useState, FormEvent } from 'react';
-import { saveLead } from './lib/supabase';
+import { saveLead } from './lib/sheets';
 
 function App() {
   const whatsappNumber = '5522998148209';
@@ -21,9 +21,14 @@ function App() {
       await saveLead(formData);
       setSubmitMessage('Obrigada! Você ganhou seu brinde! Em breve entraremos em contato.');
       setFormData({ name: '', email: '', phone: '' });
-    } catch (error: any) {
-      if (error.code === '23505') {
-        setSubmitMessage('Este e-mail já está cadastrado!');
+    } catch (error: unknown) {
+      if (typeof error === 'object' && error !== null && 'code' in error) {
+        const code = (error as { code?: string }).code;
+        if (code === '23505') {
+          setSubmitMessage('Este e-mail já está cadastrado!');
+        } else {
+          setSubmitMessage('Erro ao enviar. Tente novamente.');
+        }
       } else {
         setSubmitMessage('Erro ao enviar. Tente novamente.');
       }
@@ -40,6 +45,8 @@ function App() {
     'Gestão financeira do seu consultório',
     'Suporte personalizado durante toda a jornada'
   ];
+  // Mark variable used to avoid TypeScript unused-variable error during typecheck
+  void benefits;
 
   const testimonials = [
     {
