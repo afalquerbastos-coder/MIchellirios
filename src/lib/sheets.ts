@@ -1,5 +1,6 @@
 import type { Lead } from './supabase';
 
+// URL do Google Apps Script para salvar leads na planilha
 const SCRIPTS_URL = import.meta.env.VITE_SHEETS_URL;
 
 if (!SCRIPTS_URL) {
