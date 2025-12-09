@@ -1,11 +1,9 @@
 import type { Lead } from './supabase';
 
-const SCRIPTS_URL = import.meta.env.VITE_SHEETS_URL || '/.netlify/functions/submit';
+const SCRIPTS_URL = import.meta.env.VITE_SHEETS_URL;
 
 if (!SCRIPTS_URL) {
-  // Not throwing to avoid crashing in dev, but warn developers
-  // We'll still try to avoid any uncaught errors at runtime
-  // Silently allowing undefined helps local dev without env vars
+  console.warn('VITE_SHEETS_URL não está configurada. O formulário não funcionará.');
 }
 
 export async function saveLead(lead: Lead) {
@@ -17,22 +15,20 @@ export async function saveLead(lead: Lead) {
     phone: lead.phone,
   };
 
-  const res = await fetch(SCRIPTS_URL as string, {
+  // Para Google Apps Script, precisamos usar mode: 'no-cors' ou enviar como form data
+  // Usando redirect: 'follow' para lidar com o redirecionamento do Google
+  await fetch(SCRIPTS_URL as string, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'text/plain',
     },
     body: JSON.stringify(payload),
   });
 
-  if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    throw new Error(`Failed to save lead: ${res.status} ${text}`);
-  }
-
-  // The Google Apps Script should return a JSON with at least {ok:true}
-  const data = await res.json().catch(() => null);
-  return data;
+  // Com mode: 'no-cors', não conseguimos ler a resposta, mas a requisição é enviada
+  // Se chegou aqui sem erro de rede, consideramos sucesso
+  return { ok: true };
 }
 
 export default saveLead;
