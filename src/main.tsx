@@ -7,7 +7,7 @@ import FacebookPixel from './FacebookPixel.jsx'; // Importe o componente
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    import FacebookPixel from './components/FacebookPixel.jsx'; // Importe o componente
+    <FacebookPixel />
     <App />
   </StrictMode>
 );
